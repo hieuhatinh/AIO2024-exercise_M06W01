@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  streamlit_app:
+    build:
+      context: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./src:/src  # Bind mount mã nguồn
+    command: ["streamlit", "run", "frontend/app.py", "--server.port=8501", "--server.enableCORS=false"]
