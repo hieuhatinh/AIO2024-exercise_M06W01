@@ -3,6 +3,7 @@ WORKDIR /src
 
 # install application dependencies
 COPY ./requirements.txt /src/requirements.txt
+RUN pip install --no-cache-dir --upgrade pip
 RUN pip install --no-cache-dir --upgrade -r /src/requirements.txt
 
 COPY ./src /src

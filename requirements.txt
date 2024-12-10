@@ -3,3 +3,4 @@ torchvision==0.16.0
 torchtext==0.16.0
 langid
 streamlit
+numpy==1.26.3
