@@ -129,7 +129,8 @@ def inference(sentence, vocabulary, model):
 def run():
     st.title('Sentiment Analysis')
     st.title('Model: Text CNN. Dataset: NTC-SCV')
-    text_input = st.text_input("Sentence: ", placeholder='Enter your sentence')
+    text_input = st.text_input(
+        "Sentence: ", 'đồ ăn quán này quá tệ luôn', placeholder='Enter your sentence')
     if (text_input):
         p, idx = inference(text_input, vocabulary, model)
         label = idx2label[idx]
